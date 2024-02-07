@@ -66,7 +66,7 @@ async def listmv(c, m):
     if querys == "":
         await m.reply(f'`/listmv [query]`', quote=True)
     elif querys != "":
-        link = f"https://www.1tamilmv.com/index.php?/search/&q={querys}&search_and_or=and&search_in=titles&sortby=relevancy"
+        link = f"https://www.1tamilmv.world/index.php?/search/&q={querys}&search_and_or=and&search_in=titles&sortby=relevancy"
         txt = await m.reply_text(f"Searching for: {querys} 🔍")
         driver.get(link)
         await asyncio.sleep(5)
@@ -101,7 +101,7 @@ async def lists(c, m):
     if querys == "":
         await m.reply(f'`/listbl [query]`', quote=True)
     elif querys != "":
-        link = f"https://www.tamilblasters.com/index.php?/search/&q={querys}&search_and_or=and&search_in=titles&sortby=relevancy"
+        link = f"https://www.1tamilblasters.zip/index.php?/search/&q={querys}&search_and_or=and&search_in=titles&sortby=relevancy"
         txt = await m.reply_text(f"Searching for: {querys} 🔍")
         driver.get(link)
         await asyncio.sleep(5)
@@ -133,7 +133,7 @@ async def ss(bot, message):
     N = 7
     name = ''.join(random.choices(string.ascii_uppercase +
                                   string.digits, k=N))
-    driver.get("https://www.1tamilmv.com/")
+    driver.get("https://www.1tamilmv.world/")
     photo = name + ".png"
     driver.save_screenshot(photo)
 
@@ -141,7 +141,7 @@ async def ss(bot, message):
     N = 7
     name = ''.join(random.choices(string.ascii_uppercase +
                                   string.digits, k=N))
-    driver.get("https://www.tamilblasters.com/")
+    driver.get("https://www.1tamilblasters.zip/")
     await txt.edit(text="Got Screenshot of 1TamilMv.com. Now Getting screenshot of latest movies of TamilBlasters.com")
     photo1 = name + ".png"
     driver.save_screenshot(photo1)
